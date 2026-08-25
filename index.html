@@ -1,0 +1,2483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Uracline Space— Financial Intelligence Through Technology</title>
+    <meta
+      name="description"
+      content="Financial technology that turns complexity into clarity across taxation, accounting, compliance and financial management."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --orange: #ff6a2c;
+        --orange-light: #ff8f52;
+        --orange-soft: #fff1e8;
+
+        --blue: #1557d5;
+        --blue-bright: #2d7cff;
+        --blue-soft: #eaf1ff;
+
+        --black: #0d0d0d;
+        --ink: #15171b;
+        --white: #ffffff;
+
+        --grey-50: #fafafa;
+        --grey-100: #f4f5f7;
+        --grey-200: #e4e7eb;
+        --grey-300: #d1d5db;
+        --grey-500: #68707c;
+        --grey-700: #343a43;
+
+        --max: 1180px;
+
+        --display: "Space Grotesk", sans-serif;
+        --body: "Inter", sans-serif;
+        --mono: "IBM Plex Mono", monospace;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--body);
+        color: var(--ink);
+        background: var(--white);
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      ::selection {
+        background: var(--blue);
+        color: white;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 64px));
+        margin: 0 auto;
+      }
+
+      .mono {
+        font-family: var(--mono);
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        margin-bottom: 20px;
+
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+
+        color: var(--blue);
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: currentColor;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        letter-spacing: -0.035em;
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 6vw, 5.6rem);
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: clamp(2.4rem, 4.5vw, 4rem);
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      .section {
+        padding: 130px 0;
+      }
+
+      .section-header {
+        max-width: 720px;
+        margin-bottom: 70px;
+      }
+
+      .section-header p {
+        margin-top: 24px;
+        color: var(--grey-500);
+        font-size: 17px;
+        max-width: 650px;
+      }
+
+      /* --------------------------------
+       NAVIGATION
+    -------------------------------- */
+
+      .nav {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        border-bottom: 1px solid rgba(228, 231, 235, 0.8);
+
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav-inner {
+        height: 76px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        font-family: var(--display);
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .logo-mark {
+        position: relative;
+
+        /* width: 12px; */
+        height: 50px;
+
+        /* background: var(--blue); */
+        border-radius: 2px;
+      }
+
+      .logo-mark::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background: var(--orange);
+        border-radius: 2px;
+
+        transform: translate(4px, 4px);
+
+        z-index: -1;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .nav-links a {
+        color: var(--grey-700);
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--black);
+      }
+
+      .nav-links a.active {
+        color: var(--blue);
+      }
+
+      .nav-cta {
+        padding: 10px 18px;
+
+        color: white !important;
+        background: var(--blue);
+
+        border-radius: 6px;
+
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .nav-cta:hover {
+        background: var(--blue-bright);
+        transform: translateY(-1px);
+      }
+
+      .nav-toggle {
+        display: none;
+
+        width: 42px;
+        height: 42px;
+
+        border: 1px solid var(--grey-200);
+        background: white;
+        border-radius: 6px;
+
+        cursor: pointer;
+      }
+
+      /* --------------------------------
+       BUTTONS
+    -------------------------------- */
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        min-height: 48px;
+        padding: 0 20px;
+
+        border-radius: 6px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        color: white;
+        background: var(--orange);
+      }
+
+      .btn-primary:hover {
+        background: var(--orange-light);
+      }
+
+      .btn-outline {
+        color: var(--black);
+        border: 1px solid var(--grey-300);
+        background: white;
+      }
+
+      .btn-outline:hover {
+        border-color: var(--black);
+      }
+
+      /* --------------------------------
+       HERO
+    -------------------------------- */
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+
+        padding: 180px 0 120px;
+
+        background:
+          linear-gradient(rgba(13, 13, 13, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(13, 13, 13, 0.045) 1px, transparent 1px);
+
+        background-size: 48px 48px;
+      }
+
+      .hero::after {
+        content: "";
+
+        position: absolute;
+        width: 650px;
+        height: 650px;
+
+        top: 80px;
+        right: -280px;
+
+        background: radial-gradient(
+          circle,
+          rgba(21, 87, 213, 0.12),
+          transparent 68%
+        );
+
+        pointer-events: none;
+      }
+
+      /* Fading logo watermark behind the hero content */
+      .hero-logo-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+
+        width: 620px;
+        height: 620px;
+
+        transform: translate(-50%, -50%);
+
+        pointer-events: none;
+      }
+
+      .logo-bg-square {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+
+        width: 360px;
+        height: 360px;
+
+        border-radius: 54px;
+        opacity: 0;
+      }
+
+      .logo-bg-square--blue {
+        background: var(--blue);
+        transform: translate(-9%, -9%) rotate(-6deg);
+        animation: logoBgFadeIn 2.6s cubic-bezier(0.19, 1, 0.22, 1) 0.3s
+          forwards;
+      }
+
+      .logo-bg-square--orange {
+        background: var(--orange);
+        transform: translate(9%, 9%) rotate(6deg);
+        animation: logoBgFadeIn 2.6s cubic-bezier(0.19, 1, 0.22, 1) 0.7s
+          forwards;
+      }
+
+      @keyframes logoBgFadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.06;
+        }
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        max-width: 720px;
+      }
+
+      .hero h1 span {
+        color: var(--blue-bright);
+      }
+
+      .hero-description {
+        max-width: 570px;
+
+        margin-top: 28px;
+
+        color: var(--grey-500);
+        font-size: 18px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        margin-top: 36px;
+      }
+
+      /* HERO SYSTEM */
+
+      .system-window {
+        position: relative;
+        z-index: 2;
+
+        min-height: 500px;
+
+        border: 1px solid var(--grey-200);
+        border-radius: 14px;
+
+        background: rgba(255, 255, 255, 0.92);
+
+        box-shadow: 0 35px 80px rgba(13, 13, 13, 0.12);
+
+        overflow: hidden;
+
+        transition:
+          transform 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+          box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+          border-color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .system-window:hover {
+        transform: translateY(-6px);
+        border-color: rgba(21, 87, 213, 0.35);
+        box-shadow: 0 45px 100px rgba(21, 87, 213, 0.16);
+      }
+
+      .window-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 14px 18px;
+
+        border-bottom: 1px solid var(--grey-200);
+
+        font-family: var(--mono);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--grey-500);
+      }
+
+      .window-status {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .status-dot {
+        width: 7px;
+        height: 7px;
+
+        border-radius: 50%;
+        background: #38a169;
+
+        box-shadow: 0 0 0 4px rgba(56, 161, 105, 0.12);
+      }
+
+      .system-body {
+        position: relative;
+        min-height: 445px;
+        padding: 28px;
+      }
+
+      .system-label {
+        margin-bottom: 20px;
+
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--grey-500);
+      }
+
+      .data-stream {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .data-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 13px 14px;
+
+        border: 1px solid var(--grey-200);
+        border-radius: 7px;
+
+        background: var(--grey-50);
+
+        font-family: var(--mono);
+        font-size: 11px;
+
+        animation: streamIn 0.8s cubic-bezier(0.19, 1, 0.22, 1) both;
+
+        transition:
+          border-color 0.35s ease,
+          transform 0.35s ease,
+          background 0.35s ease;
+      }
+
+      .data-item:hover {
+        border-color: rgba(21, 87, 213, 0.4);
+        background: var(--blue-soft);
+        transform: translateX(3px);
+      }
+
+      .data-item:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .data-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .data-item:nth-child(4) {
+        animation-delay: 0.45s;
+      }
+
+      .data-type {
+        color: var(--grey-500);
+      }
+
+      .data-value {
+        color: var(--black);
+        font-weight: 500;
+
+        display: inline-block;
+        transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .system-arrow {
+        display: flex;
+        justify-content: center;
+
+        padding: 24px 0;
+
+        color: var(--orange);
+        font-family: var(--mono);
+        font-size: 11px;
+      }
+
+      .resolved {
+        padding: 20px;
+
+        border: 1px solid rgba(21, 87, 213, 0.3);
+        border-radius: 9px;
+
+        background: var(--blue-soft);
+
+        transition: box-shadow 0.4s ease;
+      }
+
+      .resolved-label {
+        margin-bottom: 12px;
+
+        color: var(--blue);
+
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .resolved h3 {
+        margin-bottom: 8px;
+        font-size: 19px;
+      }
+
+      .resolved p {
+        color: var(--grey-700);
+        font-size: 13px;
+      }
+
+      .resolved-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+
+        margin-top: 18px;
+      }
+
+      .resolved-stat {
+        padding: 10px;
+
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.7);
+
+        transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .resolved-stat:hover {
+        transform: translateY(-2px);
+      }
+
+      .resolved-stat strong {
+        display: block;
+        font-family: var(--mono);
+        font-size: 11px;
+      }
+
+      .resolved-stat span {
+        color: var(--grey-500);
+        font-size: 9px;
+      }
+
+      @keyframes streamIn {
+        from {
+          opacity: 0;
+          transform: translateX(18px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* --------------------------------
+       PROBLEM
+    -------------------------------- */
+
+      .problem {
+        background: var(--black);
+        color: white;
+      }
+
+      .problem .eyebrow {
+        color: var(--orange-light);
+      }
+
+      .problem-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: end;
+      }
+
+      .problem h2 {
+        max-width: 650px;
+      }
+
+      .problem-copy {
+        color: #a7adb5;
+        font-size: 17px;
+      }
+
+      .problem-copy strong {
+        display: block;
+
+        margin-top: 25px;
+
+        color: white;
+
+        font-family: var(--display);
+        font-size: 21px;
+        font-weight: 500;
+      }
+
+      .complexity-map {
+        position: relative;
+
+        min-height: 360px;
+
+        border: 1px solid #272727;
+        border-radius: 12px;
+
+        background:
+          radial-gradient(
+            circle at center,
+            rgba(255, 106, 44, 0.09),
+            transparent 35%
+          ),
+          #111;
+      }
+
+      .map-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 150px;
+        height: 150px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: translate(-50%, -50%);
+
+        border: 1px solid rgba(255, 106, 44, 0.5);
+        border-radius: 50%;
+
+        color: white;
+        text-align: center;
+        font-family: var(--display);
+        font-size: 17px;
+
+        background: #161616;
+        box-shadow: 0 0 70px rgba(255, 106, 44, 0.1);
+      }
+
+      .complexity-node {
+        position: absolute;
+
+        padding: 9px 12px;
+
+        border: 1px solid #303030;
+        border-radius: 5px;
+
+        color: #b4bac1;
+
+        font-family: var(--mono);
+        font-size: 10px;
+
+        background: #181818;
+      }
+
+      .node-1 {
+        top: 12%;
+        left: 12%;
+      }
+      .node-2 {
+        top: 18%;
+        right: 10%;
+      }
+      .node-3 {
+        bottom: 16%;
+        left: 10%;
+      }
+      .node-4 {
+        bottom: 12%;
+        right: 12%;
+      }
+      .node-5 {
+        top: 47%;
+        left: 5%;
+      }
+      .node-6 {
+        top: 48%;
+        right: 5%;
+      }
+
+      .complexity-line {
+        position: absolute;
+
+        height: 1px;
+
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(45, 124, 255, 0.55),
+          transparent
+        );
+
+        transform-origin: left center;
+      }
+
+      .line-1 {
+        width: 35%;
+        top: 28%;
+        left: 27%;
+        transform: rotate(25deg);
+      }
+
+      .line-2 {
+        width: 34%;
+        top: 30%;
+        left: 52%;
+        transform: rotate(-25deg);
+      }
+
+      .line-3 {
+        width: 35%;
+        bottom: 28%;
+        left: 26%;
+        transform: rotate(-25deg);
+      }
+
+      .line-4 {
+        width: 34%;
+        bottom: 27%;
+        left: 53%;
+        transform: rotate(25deg);
+      }
+
+      /* --------------------------------
+       AUDIENCE
+    -------------------------------- */
+
+      .audience-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .audience-copy p {
+        color: var(--grey-500);
+        font-size: 17px;
+      }
+
+      .audience-copy strong {
+        display: block;
+        margin-top: 22px;
+
+        font-family: var(--display);
+        font-size: 22px;
+        line-height: 1.25;
+      }
+
+      .audience-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 9px;
+      }
+
+      .audience-tag {
+        padding: 10px 14px;
+
+        border: 1px solid var(--grey-200);
+        border-radius: 100px;
+
+        color: var(--grey-700);
+        background: white;
+
+        font-family: var(--mono);
+        font-size: 11px;
+
+        transition: 0.2s ease;
+      }
+
+      .audience-tag:hover {
+        color: var(--orange);
+        border-color: var(--orange);
+        transform: translateY(-2px);
+      }
+
+      .audience-tag.core {
+        color: white;
+        background: var(--blue);
+        border-color: var(--blue);
+      }
+
+      /* --------------------------------
+       BELIEF
+    -------------------------------- */
+
+      .belief {
+        background: var(--grey-100);
+      }
+
+      .belief-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 90px;
+        align-items: center;
+      }
+
+      .belief-copy p {
+        margin-top: 25px;
+        max-width: 570px;
+
+        color: var(--grey-500);
+        font-size: 17px;
+      }
+
+      .belief-statement {
+        margin-top: 40px;
+        padding-left: 25px;
+
+        border-left: 2px solid var(--blue);
+
+        font-family: var(--display);
+        font-size: clamp(25px, 3vw, 38px);
+        line-height: 1.1;
+      }
+
+      .belief-visual {
+        position: relative;
+
+        min-height: 470px;
+
+        border-radius: 12px;
+        overflow: hidden;
+
+        background: var(--black);
+      }
+
+      .belief-visual img {
+        position: absolute;
+        inset: 0;
+
+        height: 100%;
+        object-fit: cover;
+
+        opacity: 0.42;
+      }
+
+      .belief-overlay {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(
+          135deg,
+          rgba(13, 13, 13, 0.85),
+          rgba(21, 87, 213, 0.25)
+        );
+      }
+
+      .belief-overlay span {
+        max-width: 350px;
+        padding: 25px;
+
+        color: white;
+
+        font-family: var(--display);
+        font-size: 27px;
+        line-height: 1.15;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(13, 13, 13, 0.55);
+        backdrop-filter: blur(8px);
+      }
+
+      /* --------------------------------
+       APPROACH
+    -------------------------------- */
+
+      .approach {
+        background: white;
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        border-top: 1px solid var(--grey-200);
+        border-bottom: 1px solid var(--grey-200);
+      }
+
+      .process-step {
+        position: relative;
+
+        min-height: 220px;
+        padding: 30px;
+
+        border-right: 1px solid var(--grey-200);
+      }
+
+      .process-step:last-child {
+        border-right: 0;
+      }
+
+      .process-number {
+        color: var(--orange);
+
+        font-family: var(--mono);
+        font-size: 11px;
+      }
+
+      .process-step h3 {
+        margin-top: 50px;
+      }
+
+      .process-step p {
+        margin-top: 10px;
+
+        color: var(--grey-500);
+        font-size: 13px;
+      }
+
+      .approach-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 45px;
+      }
+
+      .approach-bottom strong {
+        font-family: var(--display);
+        font-size: 22px;
+      }
+
+      /* --------------------------------
+       ECOSYSTEM
+    -------------------------------- */
+
+      .ecosystem {
+        background: var(--grey-100);
+      }
+
+      .ecosystem-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .ecosystem-card {
+        position: relative;
+
+        min-height: 350px;
+        padding: 26px;
+
+        border: 1px solid var(--grey-200);
+        border-radius: 10px;
+
+        background: white;
+
+        overflow: hidden;
+
+        transition:
+          transform 0.3s cubic-bezier(0.19, 1, 0.22, 1),
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .ecosystem-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--blue);
+        box-shadow: 0 22px 45px rgba(21, 87, 213, 0.12);
+      }
+
+      .ecosystem-card::after {
+        content: "";
+
+        position: absolute;
+
+        width: 140px;
+        height: 140px;
+
+        right: -50px;
+        bottom: -50px;
+
+        border: 1px solid rgba(21, 87, 213, 0.18);
+        border-radius: 50%;
+      }
+
+      .card-index {
+        color: var(--orange);
+
+        font-family: var(--mono);
+        font-size: 10px;
+      }
+
+      .ecosystem-card h3 {
+        margin-top: 65px;
+        font-size: 25px;
+      }
+
+      .ecosystem-card p {
+        margin-top: 15px;
+
+        color: var(--grey-500);
+        font-size: 13.5px;
+      }
+
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+
+        margin-top: 30px;
+      }
+
+      .product-pill {
+        padding: 6px 9px;
+
+        border-radius: 4px;
+
+        background: var(--grey-100);
+
+        color: var(--grey-700);
+
+        font-family: var(--mono);
+        font-size: 9px;
+      }
+
+      .ecosystem-closing {
+        margin-top: 35px;
+
+        font-family: var(--display);
+        font-size: 24px;
+      }
+
+      /* --------------------------------
+       TRUST
+    -------------------------------- */
+
+      .trust {
+        background: var(--black);
+        color: white;
+      }
+
+      .trust .eyebrow {
+        color: var(--orange-light);
+      }
+
+      .trust-layout {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 90px;
+      }
+
+      .trust-intro p {
+        margin-top: 25px;
+
+        color: #a7adb5;
+        font-size: 16px;
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        border-top: 1px solid #292929;
+        border-left: 1px solid #292929;
+      }
+
+      .trust-item {
+        min-height: 180px;
+        padding: 26px;
+
+        border-right: 1px solid #292929;
+        border-bottom: 1px solid #292929;
+
+        transition: background 0.3s ease;
+      }
+
+      .trust-item:hover {
+        background: rgba(21, 87, 213, 0.08);
+      }
+
+      .trust-item span {
+        color: var(--orange);
+
+        font-family: var(--mono);
+        font-size: 10px;
+      }
+
+      .trust-item h3 {
+        margin-top: 35px;
+        font-size: 18px;
+      }
+
+      .trust-item p {
+        margin-top: 9px;
+
+        color: #8d949d;
+        font-size: 13px;
+      }
+
+      .trust-closing {
+        margin-top: 60px;
+
+        font-family: var(--display);
+        font-size: clamp(26px, 3vw, 38px);
+        line-height: 1.1;
+      }
+
+      /* --------------------------------
+       KNOWLEDGE
+    -------------------------------- */
+
+      .knowledge-layout {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 90px;
+      }
+
+      .knowledge-intro p {
+        margin-top: 25px;
+
+        color: var(--grey-500);
+        font-size: 17px;
+      }
+
+      .knowledge-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+
+        background: var(--grey-200);
+        border: 1px solid var(--grey-200);
+      }
+
+      .knowledge-card {
+        min-height: 210px;
+        padding: 27px;
+
+        background: white;
+
+        transition: 0.2s ease;
+      }
+
+      .knowledge-card:hover {
+        background: var(--grey-50);
+      }
+
+      .knowledge-card span {
+        color: var(--blue);
+
+        font-family: var(--mono);
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .knowledge-card h3 {
+        margin-top: 42px;
+      }
+
+      .knowledge-card p {
+        margin-top: 9px;
+
+        color: var(--grey-500);
+        font-size: 13px;
+      }
+
+      .knowledge-closing {
+        margin-top: 50px;
+
+        font-family: var(--display);
+        font-size: 25px;
+      }
+
+      /* --------------------------------
+       AMBITION
+    -------------------------------- */
+
+      .ambition {
+        position: relative;
+        overflow: hidden;
+
+        color: white;
+        background: #101216;
+      }
+
+      .ambition::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background:
+          linear-gradient(rgba(16, 18, 22, 0.78), rgba(16, 18, 22, 0.9)),
+          url("https://images.unsplash.com/photo-1640340434855-6084b1f4901c?auto=format&fit=crop&w=1800&q=85");
+
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+      }
+
+      .ambition .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .ambition .eyebrow {
+        color: var(--orange-light);
+      }
+
+      .ambition h2 {
+        max-width: 850px;
+      }
+
+      .ambition-copy {
+        max-width: 680px;
+
+        margin-top: 30px;
+
+        color: #b3b9c1;
+        font-size: 17px;
+      }
+
+      .ambition-statement {
+        max-width: 900px;
+
+        margin-top: 100px;
+        padding-top: 35px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        font-family: var(--display);
+        font-size: clamp(2.3rem, 5vw, 4.5rem);
+        line-height: 1;
+      }
+
+      .ambition-small {
+        max-width: 600px;
+        margin-top: 25px;
+
+        color: #8c939d;
+        font-size: 14px;
+      }
+
+      /* --------------------------------
+       CTA
+    -------------------------------- */
+
+      .final-cta {
+        padding: 110px 0;
+
+        background: linear-gradient(135deg, var(--blue), var(--blue-bright));
+        color: white;
+      }
+
+      .final-cta-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 60px;
+        align-items: end;
+      }
+
+      .final-cta h2 {
+        max-width: 700px;
+      }
+
+      .final-cta p {
+        max-width: 570px;
+        margin-top: 20px;
+
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 16px;
+      }
+
+      .cta-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .cta-actions .btn {
+        min-width: 200px;
+      }
+
+      .cta-actions .btn-primary {
+        color: var(--orange);
+        background: white;
+      }
+
+      .cta-actions .btn-primary:hover {
+        color: white;
+        background: var(--orange);
+      }
+
+      .cta-actions .btn-outline {
+        color: white;
+        border-color: rgba(255, 255, 255, 0.5);
+        background: transparent;
+      }
+
+      /* --------------------------------
+       FOOTER
+    -------------------------------- */
+
+      footer {
+        padding: 70px 0 30px;
+
+        color: #9da3ab;
+        background: var(--black);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 50px;
+
+        padding-bottom: 55px;
+
+        border-bottom: 1px solid #292929;
+      }
+
+      footer .logo {
+        color: white;
+      }
+
+      .footer-description {
+        max-width: 310px;
+
+        margin-top: 18px;
+
+        color: #727981;
+        font-size: 13px;
+      }
+
+      .footer-column h4 {
+        margin-bottom: 16px;
+
+        color: #666d76;
+
+        font-family: var(--mono);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-column a {
+        display: block;
+
+        padding: 5px 0;
+
+        color: #b8bec5;
+        font-size: 13px;
+
+        transition: color 0.2s ease;
+      }
+
+      .footer-column a:hover {
+        color: var(--blue-bright);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 25px;
+
+        color: #5e646c;
+        font-size: 11px;
+      }
+
+      /* --------------------------------
+       REVEAL
+    -------------------------------- */
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+
+        transition:
+          opacity 1s cubic-bezier(0.19, 1, 0.22, 1),
+          transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* --------------------------------
+       RESPONSIVE
+    -------------------------------- */
+
+      @media (max-width: 1000px) {
+        .hero-grid,
+        .belief-layout,
+        .audience-grid,
+        .trust-layout,
+        .knowledge-layout,
+        .problem-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-grid {
+          gap: 55px;
+        }
+
+        .ecosystem-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .process {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .process-step:nth-child(2) {
+          border-right: 0;
+        }
+
+        .process-step:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--grey-200);
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .container {
+          width: min(var(--max), calc(100% - 40px));
+        }
+
+        .section {
+          padding: 85px 0;
+        }
+
+        .nav-inner {
+          height: 68px;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 68px;
+          left: 0;
+          right: 0;
+
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+
+          padding: 15px 20px 25px;
+
+          border-bottom: 1px solid var(--grey-200);
+
+          background: white;
+
+          transform: translateY(-120%);
+          transition: transform 0.25s ease;
+        }
+
+        .nav-links.open {
+          transform: translateY(0);
+        }
+
+        .nav-links a {
+          padding: 13px 0;
+        }
+
+        .nav-cta {
+          margin-top: 8px;
+          text-align: center;
+        }
+
+        .hero {
+          padding: 135px 0 80px;
+        }
+
+        .hero h1 {
+          font-size: clamp(3rem, 14vw, 4.3rem);
+        }
+
+        .hero-logo-bg {
+          width: 420px;
+          height: 420px;
+        }
+
+        .logo-bg-square {
+          width: 240px;
+          height: 240px;
+        }
+
+        .system-window {
+          min-height: 450px;
+        }
+
+        .system-body {
+          min-height: 395px;
+          padding: 20px;
+        }
+
+        .complexity-map {
+          min-height: 300px;
+        }
+
+        .ecosystem-grid,
+        .trust-grid,
+        .knowledge-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .process {
+          grid-template-columns: 1fr;
+        }
+
+        .process-step {
+          border-right: 0;
+          border-bottom: 1px solid var(--grey-200);
+        }
+
+        .process-step:last-child {
+          border-bottom: 0;
+        }
+
+        .approach-bottom,
+        .final-cta-inner,
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .final-cta-inner {
+          display: flex;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .belief-visual {
+          min-height: 350px;
+        }
+
+        .ambition-statement {
+          margin-top: 70px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================================
+       NAVIGATION
+  ================================= -->
+
+    <header class="nav">
+      <div class="container nav-inner">
+        <!-- <a href="#top" class="logo">
+        <span class="logo-mark"></span>
+        Uracline
+      </a> -->
+        <a href="#top" class="logo">
+          <img
+            class="logo-mark"
+            src="uracline_logo.png"
+            alt="uracline space logo"
+          />
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#ecosystem">Solutions</a>
+          <a href="#knowledge">Knowledge & Insights</a>
+          <a href="#approach">How we build</a>
+          <a href="#ambition">Our direction</a>
+          <a href="#contact" class="nav-cta">Talk to us →</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ================================
+         01 — HERO
+    ================================= -->
+
+      <section class="hero">
+        <div class="hero-logo-bg" aria-hidden="true">
+          <span class="logo-bg-square logo-bg-square--blue"></span>
+          <span class="logo-bg-square logo-bg-square--orange"></span>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Financial Intelligence Through Technology</div>
+
+            <h1>
+              Financial complexity
+              <span>should end somewhere.</span>
+            </h1>
+
+            <p class="hero-description">
+              We build technology that turns complex taxation, accounting,
+              compliance and financial management into something people can
+              understand, manage and act on.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#ecosystem" class="btn btn-primary">
+                Explore what we're building →
+              </a>
+            </div>
+          </div>
+
+          <div class="system-window reveal">
+            <div class="window-bar">
+              <span>financial.system / processing</span>
+
+              <span class="window-status">
+                <span class="status-dot"></span>
+                active
+              </span>
+            </div>
+
+            <div class="system-body">
+              <div class="system-label">fragmented information</div>
+
+              <div class="data-stream">
+                <div class="data-item">
+                  <span class="data-type">PLATFORM_INCOME</span>
+                  <span class="data-value">17 transactions</span>
+                </div>
+
+                <div class="data-item">
+                  <span class="data-type">EXPENSE_RECORDS</span>
+                  <span class="data-value">3 sources</span>
+                </div>
+
+                <div class="data-item">
+                  <span class="data-type">TAX_OBLIGATION</span>
+                  <span class="data-value">unresolved</span>
+                </div>
+
+                <div class="data-item">
+                  <span class="data-type">COMPLIANCE</span>
+                  <span class="data-value">4 deadlines</span>
+                </div>
+              </div>
+
+              <div class="system-arrow">
+                ↓ &nbsp; UNDERSTAND · CONNECT · RESOLVE &nbsp; ↓
+              </div>
+
+              <div class="resolved">
+                <div class="resolved-label">resolved financial picture</div>
+
+                <h3>Complexity → clarity</h3>
+
+                <p>
+                  Information organised into something understandable,
+                  actionable and easier to manage.
+                </p>
+
+                <div class="resolved-grid">
+                  <div class="resolved-stat">
+                    <strong>CLASSIFIED</strong>
+                    <span>income</span>
+                  </div>
+
+                  <div class="resolved-stat">
+                    <strong>CALCULATED</strong>
+                    <span>obligations</span>
+                  </div>
+
+                  <div class="resolved-stat">
+                    <strong>VISIBLE</strong>
+                    <span>next actions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         02 — PROBLEM
+    ================================= -->
+
+      <section class="section problem" id="problem">
+        <div class="container">
+          <div class="problem-grid">
+            <div class="reveal">
+              <div class="eyebrow">
+                The system is getting harder to navigate
+              </div>
+
+              <h2>Financial systems keep getting more complicated.</h2>
+            </div>
+
+            <div class="problem-copy reveal">
+              <p>
+                More rules. More platforms. More transactions. More information.
+              </p>
+
+              <p style="margin-top: 18px">
+                Yet people are still expected to understand what they owe, what
+                they can claim, what needs to be filed and what needs attention.
+              </p>
+
+              <strong> The complexity keeps moving downstream. </strong>
+            </div>
+          </div>
+
+          <div class="complexity-map reveal" style="margin-top: 70px">
+            <div class="complexity-node node-1">TAX RULES</div>
+
+            <div class="complexity-node node-2">TRANSACTIONS</div>
+
+            <div class="complexity-node node-3">DOCUMENTS</div>
+
+            <div class="complexity-node node-4">DEADLINES</div>
+
+            <div class="complexity-node node-5">PLATFORMS</div>
+
+            <div class="complexity-node node-6">REPORTING</div>
+
+            <div class="complexity-line line-1"></div>
+            <div class="complexity-line line-2"></div>
+            <div class="complexity-line line-3"></div>
+            <div class="complexity-line line-4"></div>
+
+            <div class="map-center">
+              Financial<br />
+              complexity
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         03 — WHO EXPERIENCES IT
+    ================================= -->
+
+      <section class="section" id="audience">
+        <div class="container audience-grid">
+          <div class="audience-copy reveal">
+            <div class="eyebrow">Where complexity shows up</div>
+
+            <h2>Different people. The same problem.</h2>
+
+            <p style="margin-top: 25px">
+              Creators, drivers, business owners, professionals and
+              organisations may face completely different financial situations.
+            </p>
+
+            <strong>
+              Too much complexity between people and the decisions they need to
+              make.
+            </strong>
+          </div>
+
+          <div class="audience-cloud reveal">
+            <span class="audience-tag core"> Financial complexity </span>
+
+            <span class="audience-tag">Individuals</span>
+            <span class="audience-tag">Entrepreneurs</span>
+            <span class="audience-tag">Creators</span>
+            <span class="audience-tag">Freelancers</span>
+            <span class="audience-tag">Drivers</span>
+            <span class="audience-tag">Students</span>
+            <span class="audience-tag">Accountants</span>
+            <span class="audience-tag">Tax Practitioners</span>
+            <span class="audience-tag">Law Firms</span>
+            <span class="audience-tag">Small Businesses</span>
+            <span class="audience-tag">Finance Professionals</span>
+            <span class="audience-tag">Organisations</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         04 — BELIEF
+    ================================= -->
+
+      <section class="section belief" id="belief">
+        <div class="container belief-layout">
+          <div class="belief-copy reveal">
+            <div class="eyebrow">
+              A different approach to financial technology
+            </div>
+
+            <h2>Technology should remove complexity, not create it.</h2>
+
+            <p>
+              We believe technology should do the difficult work quietly —
+              bringing information together, simplifying complicated processes
+              and showing people what matters next.
+            </p>
+
+            <p>
+              That starts with understanding the problem before building the
+              solution.
+            </p>
+
+            <div class="belief-statement">
+              The goal isn't to make finance more technical.<br />
+              <strong>It's to make it more understandable.</strong>
+            </div>
+          </div>
+
+          <div class="belief-visual reveal">
+            <img
+              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=85"
+              alt="People collaborating around technology"
+            />
+
+            <div class="belief-overlay">
+              <span>
+                Start with the problem.<br />
+                Understand it properly.<br />
+                Build what creates value.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         05 — APPROACH
+    ================================= -->
+
+      <section class="section approach" id="approach">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="eyebrow">From problem to solution</div>
+
+            <h2>We start with the problem.</h2>
+
+            <p>
+              We research how financial problems actually work — the rules,
+              processes, behaviours and systems behind them. That understanding
+              shapes what we build.
+            </p>
+          </div>
+
+          <div class="process reveal">
+            <div class="process-step">
+              <span class="process-number">01</span>
+              <h3>Research</h3>
+              <p>Investigate the systems, rules and real-world problem.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-number">02</span>
+              <h3>Understand</h3>
+              <p>Find the friction, behaviour and underlying need.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-number">03</span>
+              <h3>Build</h3>
+              <p>Turn understanding into practical technology.</p>
+            </div>
+
+            <div class="process-step">
+              <span class="process-number">04</span>
+              <h3>Improve</h3>
+              <p>Learn from reality and continuously make it better.</p>
+            </div>
+          </div>
+
+          <div class="approach-bottom reveal">
+            <strong>
+              Less friction. Better understanding. More useful outcomes.
+            </strong>
+
+            <span class="mono" style="color: var(--orange)">
+              01 → 02 → 03 → 04
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         06 — ECOSYSTEM
+    ================================= -->
+
+      <section class="section ecosystem" id="ecosystem">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="eyebrow">Solutions for real financial problems</div>
+
+            <h2>Different problems. One connected direction.</h2>
+
+            <p>
+              We're building a growing family of financial technology solutions
+              across taxation, accounting, compliance and financial
+              intelligence. Each starts with a specific problem. Together, they
+              form something bigger.
+            </p>
+          </div>
+
+          <div class="ecosystem-grid">
+            <article class="ecosystem-card reveal">
+              <span class="card-index">01 / TAX</span>
+
+              <h3>Taxation</h3>
+
+              <p>
+                Make obligations easier to understand, calculate and manage.
+              </p>
+
+              <div class="product-list">
+                <span class="product-pill">CreatorTax</span>
+                <span class="product-pill">DriverTax</span>
+                <span class="product-pill">TaxAI</span>
+                <span class="product-pill">VAT</span>
+              </div>
+            </article>
+
+            <article class="ecosystem-card reveal">
+              <span class="card-index">02 / ACCOUNTING</span>
+
+              <h3>Accounting</h3>
+
+              <p>
+                Bring records, reconciliation and reporting into clearer
+                workflows.
+              </p>
+
+              <div class="product-list">
+                <span class="product-pill">Trust</span>
+                <span class="product-pill">Books</span>
+                <span class="product-pill">Ledger</span>
+                <span class="product-pill">Assets</span>
+              </div>
+            </article>
+
+            <article class="ecosystem-card reveal">
+              <span class="card-index">03 / COMPLIANCE</span>
+
+              <h3>Compliance</h3>
+
+              <p>
+                Stay organised, informed and ahead of financial obligations.
+              </p>
+
+              <div class="product-list">
+                <span class="product-pill">Compliance</span>
+                <span class="product-pill">Filing</span>
+                <span class="product-pill">CompanyHub</span>
+                <span class="product-pill">Vault</span>
+              </div>
+            </article>
+
+            <article class="ecosystem-card reveal">
+              <span class="card-index">04 / INTELLIGENCE</span>
+
+              <h3>Financial Intelligence</h3>
+
+              <p>
+                Turn financial information into insight for better decisions.
+              </p>
+
+              <div class="product-list">
+                <span class="product-pill">AI</span>
+                <span class="product-pill">Insights</span>
+                <span class="product-pill">Forecast</span>
+                <span class="product-pill">Advisor</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="ecosystem-closing reveal">
+            Every product starts with a problem worth solving.
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         07 — TRUST
+    ================================= -->
+
+      <section class="section trust" id="trust">
+        <div class="container">
+          <div class="trust-layout">
+            <div class="trust-intro reveal">
+              <div class="eyebrow">Built on understanding</div>
+
+              <h2>Trust should come from how we work.</h2>
+
+              <p>
+                Financial technology has consequences. Accuracy, reliability and
+                transparency aren't optional.
+              </p>
+
+              <p>
+                We build from research and evidence, communicate limitations
+                honestly and continuously improve as financial systems change.
+              </p>
+            </div>
+
+            <div class="trust-grid reveal">
+              <article class="trust-item">
+                <span>01</span>
+
+                <h3>Research before assumptions.</h3>
+
+                <p>Understand the problem before building.</p>
+              </article>
+
+              <article class="trust-item">
+                <span>02</span>
+
+                <h3>Evidence before claims.</h3>
+
+                <p>Ground important decisions in credible information.</p>
+              </article>
+
+              <article class="trust-item">
+                <span>03</span>
+
+                <h3>Transparency over certainty.</h3>
+
+                <p>Say what we know — and what we don't.</p>
+              </article>
+
+              <article class="trust-item">
+                <span>04</span>
+
+                <h3>Improvement over perfection.</h3>
+
+                <p>Build, learn and improve as systems change.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="trust-closing reveal">
+            Build something worth trusting with your financial life.
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         08 — KNOWLEDGE
+    ================================= -->
+
+      <section class="section" id="knowledge">
+        <div class="container knowledge-layout">
+          <div class="knowledge-intro reveal">
+            <div class="eyebrow">KNOWLEDGE & INSIGHT</div>
+
+            <h2>Understand the systems behind the decisions.</h2>
+
+            <p>
+              We explore the systems, rules and trends shaping financial life —
+              turning complex subjects into clear explanations, useful insights
+              and practical knowledge.
+            </p>
+
+            <p>Clear explanations. Useful insights. Practical tools.</p>
+
+            <div class="knowledge-closing">
+              Learn something.<br />
+              Understand it.<br />
+              Make a better decision.
+            </div>
+          </div>
+
+          <div class="knowledge-grid reveal">
+            <article class="knowledge-card">
+              <span>Research</span>
+
+              <h3>Research & analysis.</h3>
+
+              <p>
+                Evidence and analysis of the problems shaping financial systems.
+              </p>
+            </article>
+
+            <article class="knowledge-card">
+              <span>Insights</span>
+
+              <h3>Perspectives on financial change.</h3>
+
+              <p>Legislation, technology, markets and emerging trends.</p>
+            </article>
+
+            <article class="knowledge-card">
+              <span>Guides</span>
+
+              <h3>Practical answers.</h3>
+
+              <p>Clear explanations for real financial questions.</p>
+            </article>
+
+            <article class="knowledge-card">
+              <span>Tools</span>
+
+              <h3>Knowledge you can apply.</h3>
+
+              <p>Technology that turns understanding into action.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================
+         09 — AMBITION
+    ================================= -->
+
+      <section class="section ambition" id="ambition">
+        <div class="container">
+          <div class="eyebrow reveal">Built for what's next</div>
+
+          <h2 class="reveal">
+            A financial technology ecosystem built for the world.
+          </h2>
+
+          <p class="ambition-copy reveal">
+            We're building towards a connected financial ecosystem where
+            taxation, accounting, compliance, financial management and
+            intelligence work together rather than living in separate systems.
+          </p>
+
+          <div class="ambition-statement reveal">
+            A clearer way forward for every financial decision.
+          </div>
+
+          <p class="ambition-small reveal">
+            From solving individual problems today to building the financial
+            technology ecosystem the world can rely on tomorrow.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================================
+         10 — CTA
+    ================================= -->
+
+      <section class="final-cta" id="contact">
+        <div class="container final-cta-inner">
+          <div>
+            <div class="eyebrow" style="color: white">
+              Start with what matters to you
+            </div>
+
+            <h2>Find a clearer way forward.</h2>
+
+            <p>
+              Explore what we're building, discover useful knowledge, or talk to
+              us about a financial problem worth solving.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="#ecosystem" class="btn btn-primary">
+              Explore our solutions →
+            </a>
+
+            <a
+              href="https://knowledgeos-delta.vercel.app/articles"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore knowledge →
+            </a>
+
+            <a href="mailto:tumelorabane458@gmail.com" class="btn btn-outline">
+              Talk to us →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================================
+       FOOTER
+  ================================= -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="#top" class="logo">
+              <span class="logo-mark"></span>
+              Uracline
+            </a>
+
+            <p class="footer-description">
+              Financial technology built to simplify taxation, accounting,
+              compliance and financial management, wherever you do business.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Explore</h4>
+
+            <a href="#ecosystem">Solutions</a>
+            <a href="#knowledge">Knowledge</a>
+            <a href="#approach">How we build</a>
+            <a href="#ambition">Our direction</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Company</h4>
+
+            <a href="#belief">Our philosophy</a>
+            <a href="#trust">Trust</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Connect</h4>
+
+            <a href="https://www.linkedin.com/company/uracline-space/"
+              >LinkedIn</a
+            >
+            <a href="https://www.facebook.com/profile.php?id=61592486981478"
+              >Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/uracline_space?igsi=MWFwdWE2YWVvM2p2"
+              >Instagram</a
+            >
+            <a href="mailto:tumelorabane458@gmail.com">Email</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Uracline Ltd. All rights reserved. </span>
+
+          <span> Responsible innovation · Continuous improvement </span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* --------------------------------
+       MOBILE NAVIGATION
+    -------------------------------- */
+
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      navToggle.addEventListener("click", () => {
+        const open = navLinks.classList.toggle("open");
+
+        navToggle.setAttribute("aria-expanded", String(open));
+
+        document.body.classList.toggle("menu-open", open);
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+
+          navToggle.setAttribute("aria-expanded", "false");
+
+          document.body.classList.remove("menu-open");
+        });
+      });
+
+      /* --------------------------------
+       SCROLL REVEAL
+    -------------------------------- */
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+        },
+      );
+
+      document.querySelectorAll(".reveal").forEach((element) => {
+        revealObserver.observe(element);
+      });
+
+      /* --------------------------------
+       ACTIVE NAVIGATION
+    -------------------------------- */
+
+      const sections = document.querySelectorAll("main section[id]");
+
+      const navAnchors = document.querySelectorAll(".nav-links a");
+
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            const id = entry.target.getAttribute("id");
+
+            navAnchors.forEach((anchor) => {
+              anchor.classList.remove("active");
+
+              if (anchor.getAttribute("href") === "#" + id) {
+                anchor.classList.add("active");
+              }
+            });
+          });
+        },
+        {
+          rootMargin: "-40% 0px -50% 0px",
+        },
+      );
+
+      sections.forEach((section) => {
+        sectionObserver.observe(section);
+      });
+
+      /* --------------------------------
+       HERO DATA REFRESH
+    -------------------------------- */
+
+      const dataValues = [
+        ["17 transactions", "3 sources", "unresolved", "4 deadlines"],
+        ["24 transactions", "2 sources", "reviewed", "2 deadlines"],
+        ["31 transactions", "4 sources", "classified", "1 deadline"],
+      ];
+
+      const items = document.querySelectorAll(".data-item .data-value");
+
+      let dataIndex = 0;
+
+      setInterval(() => {
+        dataIndex = (dataIndex + 1) % dataValues.length;
+
+        items.forEach((item, index) => {
+          item.style.opacity = "0";
+
+          setTimeout(() => {
+            item.textContent = dataValues[dataIndex][index];
+
+            item.style.opacity = "1";
+          }, 220);
+        });
+      }, 4200);
+
+      /* --------------------------------
+       REDUCED MOTION
+    -------------------------------- */
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".reveal").forEach((element) => {
+          element.classList.add("visible");
+        });
+
+        document.querySelectorAll(".logo-bg-square").forEach((element) => {
+          element.style.animation = "none";
+          element.style.opacity = ".06";
+        });
+      }
+    </script>
+  </body>
+</html>
