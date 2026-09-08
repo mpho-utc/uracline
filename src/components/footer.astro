@@ -1,0 +1,368 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-grid">
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="Uracline Space home">
+          <img
+            class="footer-logo-mark"
+            src="/resources/uracline_logo_dark.png"
+            alt="Uracline Space logo"
+          />
+        </a>
+
+        <p class="footer-description">
+          Technology applications built to simplify taxation, accounting,
+          compliance and financial management, wherever you do business.
+        </p>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="footer-column">
+        <h4>Explore</h4>
+
+        <a href="/insights/">Insights</a>
+        <a href="/about/#team">Team</a>
+        <a href="/about/">About</a>
+        <a href="/#ambition">Our direction</a>
+      </div>
+
+      <!-- COMPANY -->
+      <div class="footer-column">
+        <h4>Company</h4>
+
+        <a href="/about/#beliefs">Our philosophy</a>
+        <a href="/about/#trust">Trust</a>
+        <a href="mailto:tumelorabane458@gmail.com">Contact</a>
+      </div>
+
+      <!-- CONNECT -->
+      <div class="footer-column">
+        <h4>Connect</h4>
+
+        <a
+          href="https://www.linkedin.com/company/uracline-space/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61592486981478"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.instagram.com/uracline_space?igsi=MWFwdWE2YWVvM2p2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a href="mailto:tumelorabane458@gmail.com">
+          Email
+        </a>
+      </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+      <span>
+        © {currentYear} Uracline Space (Pty)Ltd. All rights reserved.
+      </span>
+
+      <span>
+        Responsible innovation · Continuous improvement
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+
+<style>
+  /* =================================
+     URACLINE SPACE — FOOTER
+  ================================= */
+
+  .site-footer {
+    position: relative;
+    overflow: hidden;
+
+    padding: 70px 0 30px;
+
+    color: #9da3ab;
+    background: #0d0d0d;
+  }
+
+  /*
+    Subtle technical grid.
+    Kept intentionally restrained so the
+    footer remains consistent with the
+    Uracline visual language.
+  */
+
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+      );
+
+    background-size: 48px 48px;
+
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      transparent 90%
+    );
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      transparent 90%
+    );
+  }
+
+  .footer-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  /* =================================
+     GRID
+  ================================= */
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid #292929;
+  }
+
+  /* =================================
+     BRAND
+  ================================= */
+
+  .footer-brand {
+    min-width: 0;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .footer-logo:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  .footer-logo-mark {
+    display: block;
+
+    width: auto;
+    height: 50px;
+
+    object-fit: contain;
+  }
+
+  .footer-description {
+    max-width: 310px;
+
+    margin: 18px 0 0;
+
+    color: #727981;
+
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  /* =================================
+     COLUMNS
+  ================================= */
+
+  .footer-column {
+    min-width: 0;
+  }
+
+  .footer-column h4 {
+    margin: 0 0 16px;
+
+    color: #666d76;
+
+    font-family:
+      "IBM Plex Mono",
+      monospace;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+  }
+
+  .footer-column a {
+    display: block;
+
+    width: fit-content;
+
+    padding: 5px 0;
+
+    color: #b8bec5;
+
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .footer-column a:hover {
+    color: #2d7cff;
+    transform: translateX(3px);
+  }
+
+  .footer-column a:focus-visible,
+  .footer-logo:focus-visible {
+    outline: 2px solid #2d7cff;
+    outline-offset: 4px;
+  }
+
+  /* =================================
+     BOTTOM
+  ================================= */
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding-top: 25px;
+
+    color: #5e646c;
+
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.6;
+  }
+
+  .footer-bottom span:last-child {
+    text-align: right;
+  }
+
+  /* =================================
+     RESPONSIVE
+  ================================= */
+
+  @media (max-width: 1000px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 45px 50px;
+    }
+
+    .footer-brand {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .site-footer {
+      padding: 60px 0 25px;
+    }
+
+    .footer-container {
+      width: calc(100% - 40px);
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 38px;
+    }
+
+    .footer-brand {
+      grid-column: auto;
+    }
+
+    .footer-description {
+      max-width: 340px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .footer-bottom span:last-child {
+      text-align: left;
+    }
+  }
+
+  /* =================================
+     REDUCED MOTION
+  ================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-logo,
+    .footer-column a {
+      transition: none;
+    }
+
+    .footer-logo:hover,
+    .footer-column a:hover {
+      transform: none;
+    }
+  }
+</style>

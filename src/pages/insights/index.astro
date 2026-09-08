@@ -1,0 +1,1252 @@
+---
+import Layout, { type SEOProps } from "../../layouts/Layout.astro";
+
+const seo: SEOProps = {
+  title: "Insights — Uracline Space",
+  description:
+    "Explore systems, rules and trends shaping financial life through clear explanations, useful insights and practical knowledge from Uracline Space.",
+  robots: "index, follow, max-image-preview:large",
+  author: "Uracline Space",
+  canonical: "https://uraclinespace.com/insights/",
+  keywords:
+    "Uracline Space insights, financial insights, financial systems, taxation, accounting, compliance, financial technology, KnowledgeOS",
+  og: {
+    title: "Insights — Uracline Space",
+    description:
+      "Explore systems, rules and trends shaping financial life through clear explanations, useful insights and practical knowledge.",
+    type: "website",
+    url: "https://uraclinespace.com/insights/",
+    image: "https://uraclinespace.com/resources/uracline_logo.png",
+    imageAlt: "Uracline Space",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Insights — Uracline Space",
+    description:
+      "Explore systems, rules and trends shaping financial life through clear explanations, useful insights and practical knowledge.",
+    image: "https://uraclinespace.com/resources/uracline_logo.png",
+  },
+  schema: {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Insights — Uracline Space",
+    url: "https://uraclinespace.com/insights/",
+    description:
+      "Explore systems, rules and trends shaping financial life through clear explanations, useful insights and practical knowledge.",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Uracline Space",
+      url: "https://uraclinespace.com/",
+    },
+  },
+};
+
+const knowledgeOSUrl = "https://knowledgeos-delta.vercel.app/articles";
+
+const featuredArticleUrl =
+  "https://knowledgeos-delta.vercel.app/articles/why-saving-is-becoming-more-difficult-for-south-african-households";
+---
+
+<Layout seo={seo}>
+  <div class="insights-page">
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="hero">
+      <div class="hero-grid-pattern"></div>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-content">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1>
+              Understand the systems behind the
+              <span>decisions.</span>
+            </h1>
+
+            <p class="hero-description">
+              We explore the systems, rules and trends shaping financial life —
+              turning complex subjects into clear explanations, useful insights
+              and practical knowledge.
+            </p>
+          </div>
+
+          <div class="knowledge-card">
+            <div class="card-topline">
+              <span class="mono">KNOWLEDGEOS</span>
+
+              <span class="status">
+                <span class="status-dot"></span>
+                OPEN
+              </span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-mark">
+                <img
+                  src="/resources/uracline_logo.png"
+                  alt="Uracline Space logo"
+                />
+              </div>
+
+              <div class="card-title">KnowledgeOS</div>
+
+              <p>The independent knowledge centre behind the work.</p>
+
+              <div class="meta-grid">
+                <div>
+                  <span class="mono">FORMAT</span>
+                  <strong>Knowledge centre</strong>
+                </div>
+
+                <div>
+                  <span class="mono">FOCUS</span>
+                  <strong>Financial systems</strong>
+                </div>
+
+                <div>
+                  <span class="mono">OUTPUT</span>
+                  <strong>Explain · Understand · Act</strong>
+                </div>
+
+                <div>
+                  <span class="mono">ACCESS</span>
+                  <strong>Open articles</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="mono">EXTERNAL KNOWLEDGE LAYER</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         KNOWLEDGEOS
+    ========================================================== -->
+
+    <section class="knowledge-section section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-intro">
+            <h2>KnowledgeOS is the knowledge layer behind the work.</h2>
+          </div>
+
+          <div class="section-copy">
+            <p class="lead">
+              KnowledgeOS is an independent knowledge centre connected to
+              Uracline Space. It is where complex financial subjects are
+              explored through articles, research, explanations and practical
+              resources.
+            </p>
+
+            <div class="divider"></div>
+
+            <h3>From complexity to understanding.</h3>
+
+            <p>
+              KnowledgeOS covers the ideas, systems, rules and trends that
+              influence taxation, accounting, compliance, financial management
+              and the wider financial technology environment.
+            </p>
+
+            <!-- SMALL ARTICLE REFERENCE -->
+
+            <a
+              class="knowledge-article"
+              href={featuredArticleUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="knowledge-article-content">
+                <span class="mono article-label"> MONEY MONDAY </span>
+
+                <strong>
+                  Why Saving Is Becoming More Difficult for South African
+                  Households
+                </strong>
+              </div>
+
+              <span class="article-arrow"> ↗ </span>
+            </a>
+
+            <a
+              class="primary-link"
+              href={knowledgeOSUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Explore KnowledgeOS</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- KNOWLEDGE TYPES -->
+
+        <div class="knowledge-grid">
+          <article class="knowledge-item">
+            <div class="item-number mono">01</div>
+
+            <h3>Research</h3>
+
+            <p>Evidence and analysis of problems shaping financial systems.</p>
+          </article>
+
+          <article class="knowledge-item">
+            <div class="item-number mono">02</div>
+
+            <h3>Insights</h3>
+
+            <p>Perspectives on legislation, technology, markets and change.</p>
+          </article>
+
+          <article class="knowledge-item">
+            <div class="item-number mono">03</div>
+
+            <h3>Guides</h3>
+
+            <p>Clear explanations for real financial questions.</p>
+          </article>
+
+          <article class="knowledge-item">
+            <div class="item-number mono">04</div>
+
+            <h3>Tools</h3>
+
+            <p>Knowledge that can be applied to decisions and workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PURPOSE
+    ========================================================== -->
+
+    <section class="purpose-section section">
+      <div class="container">
+        <div class="purpose-panel">
+          <div class="purpose-heading">
+            <h2>
+              Clear explanations.
+              <br />
+              Useful insights.
+              <br />
+              <span>Practical tools.</span>
+            </h2>
+          </div>
+
+          <div class="purpose-copy">
+            <p class="purpose-lead">
+              The purpose is not to make financial subjects more technical. It
+              is to make them more understandable, so people can see what
+              matters and make better-informed decisions.
+            </p>
+
+            <div class="steps">
+              <!-- STEP 1 -->
+
+              <div class="step">
+                <div class="step-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 5.5C4 4.672 4.672 4 5.5 4H19C19.5523 4 20 4.44772 20 5V19C20 19.5523 19.5523 20 19 20H5.5C4.672 20 4 19.328 4 18.5V5.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.7"></path>
+
+                    <path d="M8 4V20" stroke="currentColor" stroke-width="1.7"
+                    ></path>
+
+                    <path
+                      d="M12 8H17"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+
+                    <path
+                      d="M12 12H17"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Learn something.</strong>
+
+                  <p>Start with the subject and the questions that matter.</p>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+
+              <div class="step">
+                <div class="step-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10.8"
+                      cy="10.8"
+                      r="6.3"
+                      stroke="currentColor"
+                      stroke-width="1.7"></circle>
+
+                    <path
+                      d="M15.5 15.5L20 20"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+
+                    <path
+                      d="M8.5 10.8H13.1"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+
+                    <path
+                      d="M10.8 8.5V13.1"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Understand it.</strong>
+
+                  <p>Break complexity into something clear and useful.</p>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+
+              <div class="step">
+                <div class="step-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 19.5V5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+
+                    <path
+                      d="M4 19.5H20"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"></path>
+
+                    <path
+                      d="M7.5 15L11 11.5L14 13.5L19 7.5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+
+                    <path
+                      d="M16 7.5H19V10.5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+
+                <div>
+                  <strong>Make a better decision.</strong>
+
+                  <p>Turn understanding into practical action.</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="outline-link"
+              href={knowledgeOSUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span> Open KnowledgeOS articles </span>
+
+              <span> ↗ </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CLOSING
+    ========================================================== -->
+
+    <section class="closing-section">
+      <div class="container">
+        <div class="closing-grid">
+          <div>
+            <h2>Start with a question.</h2>
+          </div>
+
+          <div class="closing-copy">
+            <p>
+              Explore the knowledge centre and find articles designed to make
+              complex financial subjects easier to understand.
+            </p>
+
+            <a
+              class="primary-link"
+              href={knowledgeOSUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span> Explore KnowledgeOS → </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  /* FONTS & VARIABLES */
+
+  @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+  :global(:root) {
+    --insights-orange: #ff6a2c;
+    --insights-orange-light: #ff8f52;
+    --insights-orange-soft: #fff1e8;
+
+    --insights-blue: #1557d5;
+    --insights-blue-bright: #2d7cff;
+    --insights-blue-soft: #eaf1ff;
+
+    --insights-black: #0d0d0d;
+    --insights-ink: #15171b;
+    --insights-white: #ffffff;
+
+    --insights-grey-50: #fafafa;
+    --insights-grey-100: #f4f5f7;
+    --insights-grey-200: #e4e7eb;
+    --insights-grey-300: #d1d5db;
+    --insights-grey-500: #68707c;
+    --insights-grey-700: #343a43;
+
+    --insights-max: 1180px;
+  }
+
+  /* BASE */
+
+  .insights-page {
+    overflow: hidden;
+    color: var(--insights-ink);
+    background: var(--insights-white);
+    font-family: "Inter", sans-serif;
+  }
+
+  .insights-page :global(*) {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: min(var(--insights-max), calc(100% - 64px));
+    margin: 0 auto;
+  }
+
+  .mono {
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .section {
+    padding: 130px 0;
+  }
+
+  /* HERO */
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 165px 0 120px;
+
+    background:
+      linear-gradient(rgba(13, 13, 13, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(13, 13, 13, 0.045) 1px, transparent 1px);
+
+    background-size: 48px 48px;
+  }
+
+  .hero-grid-pattern {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+      90deg,
+      transparent 49.9%,
+      rgba(21, 87, 213, 0.05) 50%,
+      transparent 50.1%
+    );
+
+    opacity: 0.6;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 40px;
+    right: -260px;
+
+    width: 680px;
+    height: 680px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+      circle,
+      rgba(21, 87, 213, 0.14),
+      transparent 68%
+    );
+
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* EYEBROW */
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--insights-grey-500);
+
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow-line {
+    width: 28px;
+    height: 1px;
+    background: var(--insights-orange);
+  }
+
+  /* HERO LAYOUT */
+
+  .hero-layout {
+    display: grid;
+
+    grid-template-columns:
+      1.08fr
+      0.92fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+    margin-top: 48px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  h1 {
+    max-width: 730px;
+
+    font-size: clamp(3.2rem, 6vw, 5.6rem);
+    font-weight: 600;
+  }
+
+  h1 span,
+  h2 span {
+    color: var(--insights-blue-bright);
+  }
+
+  .hero-description {
+    max-width: 610px;
+
+    margin-top: 30px;
+
+    color: var(--insights-grey-500);
+
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* KNOWLEDGE CARD */
+
+  .knowledge-card {
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid var(--insights-grey-200);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    box-shadow: 0 35px 80px rgba(13, 13, 13, 0.1);
+
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+  }
+
+  .knowledge-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(21, 87, 213, 0.3);
+
+    box-shadow: 0 45px 100px rgba(21, 87, 213, 0.13);
+  }
+
+  .card-topline,
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid var(--insights-grey-200);
+
+    color: var(--insights-grey-500);
+
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #38a169;
+
+    box-shadow: 0 0 0 4px rgba(56, 161, 105, 0.12);
+  }
+
+  .card-body {
+    padding: 34px 30px 30px;
+  }
+
+  .card-mark {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 24px;
+    padding: 10px;
+
+    border: 1px solid var(--insights-grey-200);
+    border-radius: 9px;
+
+    background: var(--insights-grey-50);
+  }
+
+  .card-mark img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+  .card-title {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    letter-spacing: -0.03em;
+  }
+
+  .card-body > p {
+    max-width: 390px;
+
+    margin-top: 10px;
+
+    color: var(--insights-grey-500);
+
+    font-size: 14px;
+  }
+
+  .meta-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 30px;
+  }
+
+  .meta-grid > div {
+    min-height: 88px;
+
+    padding: 15px;
+
+    border: 1px solid var(--insights-grey-200);
+    border-radius: 8px;
+
+    background: var(--insights-grey-50);
+  }
+
+  .meta-grid span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--insights-grey-500);
+
+    font-size: 8px;
+    letter-spacing: 0.09em;
+  }
+
+  .meta-grid strong {
+    display: block;
+
+    color: var(--insights-black);
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  .card-footer {
+    border-top: 1px solid var(--insights-grey-200);
+    border-bottom: 0;
+  }
+
+  .arrow {
+    color: var(--insights-orange);
+    font-size: 17px;
+  }
+
+  /* KNOWLEDGE SECTION */
+
+  .knowledge-section {
+    border-top: 1px solid var(--insights-grey-200);
+  }
+
+  .section-grid {
+    display: grid;
+
+    grid-template-columns:
+      0.9fr
+      1.1fr;
+
+    gap: 100px;
+  }
+
+  .section-intro h2 {
+    max-width: 560px;
+
+    margin-top: 25px;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 600;
+  }
+
+  .section-copy {
+    max-width: 610px;
+  }
+
+  .lead {
+    color: var(--insights-grey-700);
+
+    font-size: 19px;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 34px 0;
+
+    background: var(--insights-grey-200);
+  }
+
+  .section-copy h3 {
+    margin-bottom: 14px;
+
+    font-size: 25px;
+  }
+
+  .section-copy > p:not(.lead) {
+    color: var(--insights-grey-500);
+
+    line-height: 1.75;
+  }
+
+  /* SMALL KNOWLEDGEOS ARTICLE REFERENCE */
+
+  .knowledge-article {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 30px;
+    padding: 18px 0;
+
+    border-top: 1px solid var(--insights-grey-200);
+    border-bottom: 1px solid var(--insights-grey-200);
+
+    color: var(--insights-black);
+
+    transition:
+      color 0.2s ease,
+      padding 0.2s ease;
+  }
+
+  .knowledge-article:hover {
+    color: var(--insights-blue);
+
+    padding-left: 6px;
+  }
+
+  .knowledge-article-content {
+    min-width: 0;
+  }
+
+  .article-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--insights-orange);
+
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .knowledge-article strong {
+    display: block;
+
+    max-width: 520px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .article-arrow {
+    flex-shrink: 0;
+
+    color: var(--insights-orange);
+
+    font-size: 18px;
+  }
+
+  /* LINKS */
+
+  .primary-link,
+  .outline-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    min-height: 50px;
+
+    margin-top: 34px;
+    padding: 0 18px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .primary-link {
+    color: var(--insights-white);
+    background: var(--insights-blue);
+  }
+
+  .primary-link:hover {
+    transform: translateY(-2px);
+
+    background: var(--insights-blue-bright);
+  }
+
+  .outline-link {
+    color: var(--insights-white);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .outline-link:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--insights-orange);
+  }
+
+  /* KNOWLEDGE GRID */
+
+  .knowledge-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 90px;
+  }
+
+  .knowledge-item {
+    min-height: 240px;
+
+    padding: 25px;
+
+    border: 1px solid var(--insights-grey-200);
+
+    background: var(--insights-white);
+
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      background 0.3s ease;
+  }
+
+  .knowledge-item:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(21, 87, 213, 0.35);
+
+    background: var(--insights-blue-soft);
+  }
+
+  .item-number {
+    margin-bottom: 62px;
+
+    color: var(--insights-orange);
+
+    font-size: 10px;
+  }
+
+  .knowledge-item h3 {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+  }
+
+  .knowledge-item p {
+    color: var(--insights-grey-500);
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* PURPOSE */
+
+  .purpose-section {
+    background: var(--insights-black);
+  }
+
+  .purpose-panel {
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 100px;
+
+    padding: 70px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+
+    background-size: 42px 42px;
+  }
+
+  .eyebrow-light {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .purpose-heading h2 {
+    margin-top: 25px;
+
+    color: var(--insights-white);
+
+    font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+  }
+
+  .purpose-heading h2 span {
+    color: var(--insights-orange);
+  }
+
+  .purpose-copy {
+    max-width: 540px;
+  }
+
+  .purpose-lead {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .steps {
+    margin-top: 38px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .step {
+    display: grid;
+
+    grid-template-columns: 44px 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .step-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(21, 87, 213, 0.35);
+    border-radius: 8px;
+
+    background: rgba(21, 87, 213, 0.08);
+
+    color: var(--insights-blue-bright);
+  }
+
+  .step-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .step strong {
+    display: block;
+
+    color: var(--insights-white);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 17px;
+  }
+
+  .step p {
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 12px;
+  }
+
+  /* CLOSING */
+
+  .closing-section {
+    padding: 110px 0;
+
+    border-top: 1px solid var(--insights-grey-200);
+  }
+
+  .closing-grid {
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      0.75fr;
+
+    gap: 100px;
+
+    align-items: end;
+  }
+
+  .closing-grid h2 {
+    margin-top: 25px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+  }
+
+  .closing-copy {
+    max-width: 470px;
+  }
+
+  .closing-copy p {
+    color: var(--insights-grey-500);
+
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 1000px) {
+    .hero-layout,
+    .section-grid,
+    .purpose-panel,
+    .closing-grid {
+      grid-template-columns: 1fr;
+
+      gap: 55px;
+    }
+
+    .knowledge-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purpose-panel {
+      padding: 48px;
+    }
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 700px) {
+    .container {
+      width: min(100% - 40px, var(--insights-max));
+    }
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .hero {
+      padding: 135px 0 85px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 14vw, 4.3rem);
+    }
+
+    .hero-description {
+      font-size: 16px;
+    }
+
+    .hero-layout {
+      gap: 45px;
+      margin-top: 38px;
+    }
+
+    .card-body {
+      padding: 25px 20px 20px;
+    }
+
+    .meta-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-grid {
+      gap: 42px;
+    }
+
+    .knowledge-grid {
+      grid-template-columns: 1fr;
+
+      margin-top: 55px;
+    }
+
+    .knowledge-item {
+      min-height: auto;
+    }
+
+    .item-number {
+      margin-bottom: 35px;
+    }
+
+    .knowledge-article {
+      align-items: flex-start;
+
+      gap: 15px;
+    }
+
+    .knowledge-article strong {
+      font-size: 14px;
+    }
+
+    .purpose-panel {
+      gap: 45px;
+
+      padding: 30px 22px;
+    }
+
+    .closing-section {
+      padding: 80px 0;
+    }
+
+    .closing-grid {
+      gap: 40px;
+    }
+
+    .primary-link,
+    .outline-link {
+      width: 100%;
+    }
+  }
+
+  /* REDUCED MOTION */
+
+  @media (prefers-reduced-motion: reduce) {
+    .knowledge-card,
+    .knowledge-item,
+    .knowledge-article,
+    .primary-link,
+    .outline-link {
+      transition: none;
+    }
+  }
+</style>
